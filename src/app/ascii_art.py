@@ -5,7 +5,6 @@ import sys
 import time
 import os
 import argparse
-from backup import DEFAULT_VIDEO
 
 ASCII_CHARS = "  .:-=+*#%"
 
@@ -165,7 +164,7 @@ if __name__ == '__main__':
                         help='Processing mode (default: auto-detect)')
     parser.add_argument('--no-clear', action='store_true', help='Disable terminal clear/animation')
     args = parser.parse_args()
-    target_file = args.input or DEFAULT_VIDEO
+    target_file = args.input
     
     # Auto-detect mode if not specified
     mode = args.mode
